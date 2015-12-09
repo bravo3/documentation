@@ -1,0 +1,135 @@
+table.highlighttable {
+    width: 100%;
+}
+
+.linenos {
+    width: 4rem;
+
+    pre {
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+        border-right: none;
+        border: 0;
+        color: #888888;
+        background: #313335;
+        text-align: right;
+    }
+}
+
+.highlighttable {
+    .code {
+        pre {
+            border-bottom-left-radius: 0;
+            border-top-left-radius: 0;
+        }
+    }
+}
+
+.code {
+    pre {
+        border: 0;
+        color: #e6e7e3;
+        //color: #A0A19D;
+        background: #2B2B2B;
+    }
+
+    .highlight {
+        .nf {
+            color: #FFC66D;
+        }
+
+        .k {
+            color: #CC7832;
+        }
+
+        .nc {
+            color: #ffffff;
+        }
+
+        .nx {
+            color: #A9B7C6;
+        }
+
+        .nv {
+            color: #3BB8F3;
+        }
+
+        .s1, .s2, .mi {
+            color: #CCB25B;
+        }
+
+        .na {
+            color: #CB413F;
+        }
+
+        .sd {
+            color: #65F457;
+        }
+
+        .c1 {
+            color: #5BD16F;
+        }
+
+        .o {
+            color: #CC7832;
+        }
+
+        .l-Scalar-Plain {
+            color: #F82C22;
+        }
+    }
+}
+
+.configuration-block {
+    position: relative;
+    display: block;
+
+    ul {
+        list-style: none;
+        display: block;
+        margin: 0;
+        padding: 0 0 0 40px;
+
+        li {
+            border-radius: 0.5rem 0.5rem 0 0;
+            float: left;
+            list-style: none;
+            margin: 0 0.7rem 0.7rem 0;
+            padding: 0.5rem 1rem;
+            background: #ccc;
+
+            &.active {
+                background: #2B2B2B;
+
+                em>a {
+                    color: #ffffff;
+                }
+            }
+
+            >em {
+                font-size: 90%;
+                font-style: normal;
+                margin-bottom: 10px;
+
+                a {
+                    text-decoration: none;
+                }
+            }
+
+            >div {
+                margin: 0.5rem 0 1.5rem 0;
+                max-width: 100%;
+                width: 100%;
+                overflow: auto;
+                position: absolute;
+                left: 0;
+            }
+        }
+    }
+
+    &:after, &:before {
+        clear: both;
+        content: " ";
+        display: table;
+    }
+}

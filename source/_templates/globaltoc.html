@@ -1,0 +1,12 @@
+{%- set menu = [
+    ('Home', 'index'),
+    ('ORM', 'orm/index'),
+    ('Contributing', 'contributing/index')
+] -%}
+<ul class="submenu">
+    {% for name, doc in menu %}
+    <li>
+        <a href="{{ pathto(doc) }}">{{ name }}</a>
+    </li>
+    {% endfor %}
+</ul>

@@ -1,0 +1,46 @@
+.admonition {
+    border-radius: 0.5rem;
+    padding: 1rem 1.5rem;
+    margin: 2rem 0 2rem 4.5rem;
+    background: #eee;
+
+    p {
+        margin: 0.5rem 0;
+    }
+
+    .admonition-title {
+        float: left;
+        margin: 0 0 0 -5rem;
+        font-size: 0;
+
+        &:before {
+            font: normal normal normal 30px/1 FontAwesome;
+        }
+    }
+}
+
+.tip {
+    &.admonition {
+        background: rgba(132, 216, 232, 0.27);
+    }
+
+    .admonition-title {
+        color: #168DD8;
+        &:before {
+            content: "\f0eb";
+        }
+    }
+}
+
+.caution {
+    &.admonition {
+        background: rgba(232, 188, 116, 0.16);
+    }
+
+    .admonition-title {
+        color: #F9A84F;
+        &:before {
+            content: "\f071";
+        }
+    }
+}

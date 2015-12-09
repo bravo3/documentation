@@ -1,0 +1,42 @@
+directory: ./assets/
+url: /assets
+debug: False
+updater: timestamp
+config:
+    sass_bin: ~
+
+bundles:
+    # Main outputs
+    scripts:
+        output: scripts.js
+        contents: [ 'jquery-js', 'bootstrap-js', 'site-js' ]
+
+    styles:
+        output: styles.css
+        contents: [ 'bootstrap-css', 'font-awesome-css', 'site-css' ]
+
+    # Javascript components
+    jquery-js:
+        contents:
+            - ../../../components/jquery/dist/jquery.min.js
+
+    bootstrap-js:
+        contents:
+            - ../../../components/bootstrap/dist/js/bootstrap.min.js
+
+    site-js:
+        filters: rjsmin
+        contents: '../*.js'
+
+    # CSS components
+    bootstrap-css:
+        contents:
+            - ../../../components/bootstrap/dist/css/bootstrap.css
+
+    font-awesome-css:
+        contents:
+            - ../../../components/font-awesome/css/font-awesome.min.css
+
+    site-css:
+        filters: scss
+        contents: '../*.scss'
