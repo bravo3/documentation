@@ -1,0 +1,6 @@
+"http://{default}/":
+    type: upstream
+    upstream: "bravo3:php"
+"http://www.{default}/":
+    type: redirect
+    to: "http://{default}/"

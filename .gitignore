@@ -1,4 +1,4 @@
 /build/
+/source/_static/assets/
 /components/
-/source/_static/assets/*
 !.gitkeep

@@ -23,7 +23,7 @@ for asset in css_assets:
 js = "{{% set script_files = ['{}'] %}}\n".format("', '".join(js_assets_rel))
 css = "{{% set css_files = ['{}'] %}}\n".format("', '".join(css_assets_rel))
 
-fp = open("source/_templates/assets.html", mode='w')
+fp = open("source/_static/assets/assets.html", mode='w')
 fp.writelines([js, css])
 fp.close()
 

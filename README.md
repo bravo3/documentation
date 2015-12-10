@@ -22,4 +22,8 @@ To create HTML documentation, simply run make:
 Docs will be compiled into the `build/` directory. If you've modified the CSS/JS files, you might want to run
 `make clean` before recompiling to ensure the SCSS compiler picks up `@import` changes:
 
-    make clean && make dirhtml
+    make clean dirhtml
+
+Platform.sh
+-----------
+These documents will be compiled automatically by Platform.sh.
