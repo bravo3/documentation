@@ -6,9 +6,10 @@ Installing
 ----------
     
     # Required packages
-    apt-get install python python-pip node npm make
+    apt-get install python python-pip node npm make ruby ruby-dev
     npm install -g bower
     pip install -r requirements.txt
+    gem install sass
     
     # Third-party assets
     bower install
