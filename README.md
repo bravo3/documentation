@@ -25,6 +25,17 @@ Docs will be compiled into the `build/` directory. If you've modified the CSS/JS
 
     make clean dirhtml
 
-Platform.sh
------------
-These documents will be compiled automatically by Platform.sh.
+Deploying
+---------
+These documents are hosted on S3, to deploy you must have S3 configuration details in your `~/.aws/credentials` file:
+
+    [bravo3]
+    aws_access_key_id=xxx
+    aws_secret_access_key=xxx
+
+Then you can use `make` to deploy:
+ 
+    make deploy
+    
+The `deploy` recipe has `dirhtml` as a requisite and will sync the `build/dirhtml`/ directory with the S3 bucket, 
+changes will come live with the CDN cache expires.

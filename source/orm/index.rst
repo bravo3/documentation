@@ -36,3 +36,4 @@ Advanced Concepts
 
     race_conditions
     refs
+    bundles/symfony

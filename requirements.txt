@@ -1,5 +1,6 @@
-# Also update .platform.app.yaml
 sphinx
 git+https://github.com/fabpot/sphinx-php.git
 webassets
 pyyaml
+awscli
+boto
