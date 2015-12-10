@@ -32,6 +32,19 @@
     }
 }
 
+.note {
+    &.admonition {
+        background: rgba(128, 198, 232, 0.16);
+    }
+
+    .admonition-title {
+        color: #3379f9;
+        &:before {
+            content: "\f129";
+        }
+    }
+}
+
 .caution {
     &.admonition {
         background: rgba(232, 188, 116, 0.16);
@@ -41,6 +54,45 @@
         color: #F9A84F;
         &:before {
             content: "\f071";
+        }
+    }
+}
+
+.warning {
+    &.admonition {
+        background: rgba(232, 109, 107, 0.16);
+    }
+
+    .admonition-title {
+        color: #f93c41;
+        &:before {
+            content: "\f06a";
+        }
+    }
+}
+
+.admonition-pro {
+    &.admonition {
+        background: rgba(0, 219, 7, 0.16);
+    }
+
+    .admonition-title {
+        color: #22c41f;
+        &:before {
+            content: "\f00c";
+        }
+    }
+}
+
+.admonition-con {
+    &.admonition {
+        background: rgba(255, 0, 8, 0.10);
+    }
+
+    .admonition-title {
+        color: #d13b38;
+        &:before {
+            content: "\f00d";
         }
     }
 }

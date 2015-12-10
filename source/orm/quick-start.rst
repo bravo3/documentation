@@ -169,7 +169,7 @@ to do both.
 ..  caution::
 
     Annotations have more overhead than most other mappers, and have some caveats in the deeper internal workings of
-    the ORM. See :doc:`annotation_dangers`.
+    the ORM. See :doc:`dangers-of-annotations`.
 
 You're now ready to make your first database calls.
 
@@ -211,6 +211,24 @@ Retrieving a record by its ID is the simplest and most efficient way to retrieve
 
     $user = $manager->retrieve(User::class, 1);
     echo $user->getUsername()."\n";     // bob
+
+Because objects are references, it is possible to modify an entity and ask the entity manager to retrieve it again. The
+object returned will be the same (modified) object you've already got. If you need a fresh copy, you must ask the
+entity manager to ignore the entity cache:
+
+..  code-block:: php
+
+    use MyApp\Entity\User;
+
+    $user1 = $manager->retrieve(User::class, 1);
+    $user1->getUsername();   // bob
+    $user1->setUsername('barry');
+
+    $user2 = $manager->retrieve(User::class, 1);
+    $user2->getUsername();   // barry, $user2 is the same object as $user1
+
+    $user3 = $manager->retrieve(User::class, 1, false);
+    $user3->getUsername();   // bob, you have a fresh object
 
 Deleting a Record
 -----------------
