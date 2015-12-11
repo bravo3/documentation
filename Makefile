@@ -56,9 +56,9 @@ assets:
 	export SASS_PATH=.
 	python assets.py
 
-deploy: dirhtml
+deploy: html
 	@echo "Synchronising build with S3.."
-	aws s3 sync $(BUILDDIR)/dirhtml/ s3://bravo3/ --delete --profile=$(AWS_PROFILE)
+	aws s3 sync $(BUILDDIR)/html/ s3://bravo3/ --delete --profile=$(AWS_PROFILE)
 
 html: assets
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html

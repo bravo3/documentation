@@ -18,12 +18,12 @@ Compiling Documentation
 -----------------------
 To create HTML documentation, simply run make:
 
-    make dirhtml
+    make html
 
 Docs will be compiled into the `build/` directory. If you've modified the CSS/JS files, you might want to run
 `make clean` before recompiling to ensure the SCSS compiler picks up `@import` changes:
 
-    make clean dirhtml
+    make clean html
 
 Deploying
 ---------
@@ -35,7 +35,7 @@ These documents are hosted on S3, to deploy you must have S3 configuration detai
 
 Then you can use `make` to deploy:
  
-    make deploy
+    make clean deploy
     
-The `deploy` recipe has `dirhtml` as a requisite and will sync the `build/dirhtml`/ directory with the S3 bucket, 
+The `deploy` recipe has `html` as a requisite and will sync the `build/html/` directory with the S3 bucket, 
 changes will come live with the CDN cache expires.

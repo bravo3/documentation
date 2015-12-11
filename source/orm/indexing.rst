@@ -2,7 +2,7 @@ Indexing
 ========
 ..  warning::
 
-    Index naming conventions will be overhauled in release 0.6.0 of the ORM.
+    Index naming conventions have been overhauled in release :code:`0.6.0` of the ORM.
 
 
 Indices apply to two places within the ORM:
@@ -161,7 +161,7 @@ will ensure you do not get a modified object of the same entity from another cod
 Sorted Relationship Index
 -------------------------
 A sorted relationship index is almost completely identical to a :code:`SortedTableQuery`, they are both instances of
-the :code:`SortedQuery` class.
+the :code:`SortedQueryInterface` interface.
 
 ..  configuration-block::
 
@@ -227,8 +227,8 @@ the :code:`SortedQuery` class.
     $category = $em->retrieve(Category::class, 123);
 
     // Execute a query in the same way we did for tables:
-    $sq = new SortedQuery($category, 'articles', 'sort_date', Direction::ASC(), 2, 5);
-    $results = $em->sortedQuery($sq);
+    $srq = new SortedRelationshipQuery($category, 'articles', 'sort_date', Direction::ASC(), 2, 5);
+    $results = $em->sortedQuery($srq);
 
 Full Set Size
 -------------
@@ -239,8 +239,8 @@ must explicitly ask the entity manager to check the full set size when executing
 
 ..  code-block:: php
 
-    $sq = new SortedQuery($category, 'articles', 'sort_date', Direction::ASC(), 2, 5);
-    $results = $em->sortedQuery($sq, true);
+    $srq = new SortedRelationshipQuery($category, 'articles', 'sort_date', Direction::ASC(), 2, 5);
+    $results = $em->sortedQuery($srq, true);
     $results->getFullSize());
 
 Some drivers might know the full set size naturally as a process of filtering the data, however you can not rely on the
