@@ -1,3 +1,4 @@
+============
 Document ORM
 ============
 The Document ORM component is a PHP7 ORM for document databases such as Redis. The purpose of such an ORM is to
@@ -13,12 +14,13 @@ The Bravo3 Document ORM achieves index and relationship management by using simp
 turn creates a software layer that does what most traditional SQL database servers would do internally.
 
 General Usage
--------------
+=============
 
 ..  toctree::
     :maxdepth: 1
 
     quick-start
+    configuration
     indexing
     relationships
     queries
@@ -29,7 +31,7 @@ General Usage
     events
 
 Advanced Concepts
------------------
+=================
 
 ..  toctree::
     :maxdepth: 1

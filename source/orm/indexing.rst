@@ -1,3 +1,4 @@
+========
 Indexing
 ========
 ..  warning::
@@ -18,7 +19,7 @@ Indices apply to two places within the ORM:
     * sort the relationship
 
 Unique Index
-------------
+============
 ..  note::
 
     In release :code:`< 0.6.0` a "unique index" is referred to simply as an "Index".
@@ -90,7 +91,7 @@ Boolean index values are serialised an integer, 0 or 1:
     exception in release :code:`0.6.0`.
 
 Sorted Table Index
-------------------
+==================
 This gives you the ability to sort and filter all records in a table. It is also the most efficient way to retrieve
 all records in a table.
 
@@ -159,7 +160,7 @@ will ensure you do not get a modified object of the same entity from another cod
     accessed*, not at the time the query is executed (lazy-loading).
 
 Sorted Relationship Index
--------------------------
+=========================
 A sorted relationship index is almost completely identical to a :code:`SortedTableQuery`, they are both instances of
 the :code:`SortedQueryInterface` interface.
 
@@ -231,7 +232,7 @@ the :code:`SortedQueryInterface` interface.
     $results = $em->sortedQuery($srq);
 
 Full Set Size
--------------
+=============
 Sorted queries (table or relationship) have the ability to retrieve the full set size even if we've asked for a start
 and end index. By default the entity manager will not attempt to check the full set size (to reduce overhead) so you
 must explicitly ask the entity manager to check the full set size when executing the query:

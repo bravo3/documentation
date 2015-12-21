@@ -1,8 +1,9 @@
+===========
 Quick Start
 ===========
 
 Installing
-----------
+==========
 The best way to get started with the ORM is to add it to your :code:`composer.json`:
 
 ..  code:: bash
@@ -22,7 +23,7 @@ you also need the Symfony YAML component:
     composer require predis/predis symfony/yaml
 
 Creating a Manager
-------------------
+==================
 Your entity manager is your master service to all things ORM. You must construct an entity manager with a driver
 (connection to your database) and a mapper (a method of understanding your entities). An entity manager must be
 constructed using the factory function:
@@ -64,7 +65,7 @@ This now gives you an entity manager with the ability to support annotations or 
 is a file we'll use a little further down to store all our metadata.
 
 Creating Entities
------------------
+=================
 Entities are value-holder classes, they should contain no special logic other than getter and setters. You may inherit
 a base class and you can use traits in your entities, however.
 
@@ -174,7 +175,7 @@ to do both.
 You're now ready to make your first database calls.
 
 Persisting a Record
--------------------
+===================
 When performing write operations to the database it's important to keep in mind that all operations are done in bulk
 and not immediate at the time you call a write function on the entity manager.
 
@@ -202,7 +203,7 @@ To complete your transaction, you must run :code:`flush()` after your persist or
     a managed entity.
 
 Retrieving a Record
--------------------
+===================
 Retrieving a record by its ID is the simplest and most efficient way to retrieve data:
 
 ..  code-block:: php
@@ -231,7 +232,7 @@ entity manager to ignore the entity cache:
     $user3->getUsername();   // bob, you have a fresh object
 
 Deleting a Record
------------------
+=================
 A delete operation is similar to a persist operation, in that you need to explicitly flush the manager before the action
 takes place:
 

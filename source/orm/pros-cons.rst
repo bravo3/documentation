@@ -1,3 +1,4 @@
+==============================================
 The Pros and Cons of a Relational Document ORM
 ==============================================
 A document database is a very simple key/value database. There are no relationships, no queries.
@@ -18,14 +19,14 @@ manner in your application, however, things can get very messy, very quickly, as
 complexity.
 
 Relational Document ORM to the Rescue
--------------------------------------
+=====================================
 The theory behind a relational document ORM is to abstract the method you use to counter the lack of relationships.
 If you're using Redis, the Redis driver will use sets and sorted sets to create relational ORM style functions. If you
 use the filesystem driver - the most pure of key/value databases - then the filesystem will use serialised lists in
 individual files (documents) to maintain relationship metadata.
 
 The Downside
-------------
+============
 The pretense of a document database is speed and simplicity. You pull a document from the most efficient indexing
 engine possible (a filesystem hashtable, for example) and there is no overhead that an SQL engine requires.
 
@@ -39,7 +40,7 @@ application and the database is increased dramatically, and network latency star
     and database server.
 
 Conclusion
-----------
+==========
 You can't avoid this, you will now start to seriously increase the number of requests between your application and
 database as you make many more smaller requests for little bits and pieces of information. What is now the application
 developers responsibility to make sure they're only using the complicated factors of inter-document relationships

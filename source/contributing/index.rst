@@ -1,3 +1,4 @@
+============
 Contributing
 ============
 
@@ -7,5 +8,5 @@ Contents:
    :maxdepth: 2
 
 Bravo3 Code Standards
----------------------
+=====================
 Blahh
