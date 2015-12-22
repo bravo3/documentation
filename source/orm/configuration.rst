@@ -21,10 +21,10 @@ Forcing unique key restraints prevents an entity from overwriting the unique key
 application similar behaviour to an SQL style unique key restraint. If you disable this option, persisting an entity
 with the same key will simply overwrite the previous key, taking ownership of that key.
 
-..  caution::
+..  note::
 
-    Disabling this restraint may have unexpected behaviour if an entity that has lost ownership of the key performs an
-    operation to rename the key as it will delete the contested key as part of normal key change process.
+    If you disable the uniqueness restraint then the :code:`UniqueIndexManager` will check for a contested index before
+    deleting it to prevent it deleting an index pointing to a different entity with the same value.
 
 Run-time Toggles
 ================
