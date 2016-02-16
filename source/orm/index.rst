@@ -26,6 +26,7 @@ General Usage
     queries
     mappers
     drivers
+    pubsub
     key-schemes
     serialisers
     events
