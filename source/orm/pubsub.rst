@@ -28,6 +28,10 @@ Creating a PubSub Manager
 PubSub manager expects a database driver configuration to work. Manager is the entry point to using all functions
 supported in the Pub/Sub implementation within the ORM.
 
+PubSub manager is responsible for sending and receiving the message, on successful arrival of a message the manager will
+trigger the attached callbacks with the payload as the message to the PubSubEvent. Messages are transmitted in base64
+encoded format.
+
 You can initialise an instance of the `PubSubManager` by using the following example.
 
 ..  code-block:: php
